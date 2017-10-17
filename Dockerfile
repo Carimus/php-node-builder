@@ -1,3 +1,3 @@
 FROM jorge07/alpine-php:7.1-front
 
-RUN apk add --update rsync
+RUN apk add --update rsync sshpass
