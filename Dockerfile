@@ -1,3 +1,6 @@
 FROM jorge07/alpine-php:7.1-front
 
-RUN apk add --update rsync sshpass && rm -rf /var/cache/apk/*
+RUN addgroup -g 1000 node \
+    && adduser -u 1000 -G www -s /bin/sh -D www \
+    && apk add --no-cache --update rsync sshpass \
+    && rm -rf /var/cache/apk/*
