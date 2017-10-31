@@ -41,6 +41,7 @@ RUN apk add -U \
     php7-fpm \
     php7-tidy \
     php7-tokenizer \
+    bash \
     openssh \
     curl \
     wget \
