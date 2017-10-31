@@ -38,6 +38,7 @@ RUN apk add -U \
     php7-redis \
     php7-fpm \
     php7-tokenizer \
+    php7-fileinfo \
     openssh \
     curl \
     wget \
