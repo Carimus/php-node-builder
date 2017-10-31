@@ -14,15 +14,17 @@ RUN apk add -U \
     php7-ctype \
     php7-curl \
     php7-exif \
+    php7-fileinfo \
     php7-iconv \
+    php7-imagick \
     php7-intl \
     php7-json \
     php7-mbstring \
     php7-opcache \
     php7-openssl \
     php7-pcntl \
-    php7-pdo \
     php7-mysqlnd \
+    php7-pdo \
     php7-pdo_mysql \
     php7-pdo_pgsql \
     php7-phar \
@@ -37,8 +39,8 @@ RUN apk add -U \
     php7-dom \
     php7-redis \
     php7-fpm \
+    php7-tidy \
     php7-tokenizer \
-    php7-fileinfo \
     openssh \
     curl \
     wget \
