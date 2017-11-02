@@ -51,5 +51,8 @@ RUN apk add -U \
     python \
     g++ \
     make \
+    gifsicle \
+    libpng-dev \
+    optipng \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION} \
     && rm -rf /var/cache/* /tmp/*
