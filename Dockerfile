@@ -2,7 +2,9 @@ FROM node:8-alpine
 
 LABEL maintainer "e.nechehin <e.nechehin@gmail.com>"
 
-ARG COMPOSER_VERSION=1.5.2
+ARG COMPOSER_VERSION=1.5.5
+
+WORKDIR /home/node
 
 RUN apk add -U \
     php7 \
@@ -55,4 +57,7 @@ RUN apk add -U \
     libpng-dev \
     optipng \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION} \
+    && composer selfupdate \
+    && composer require "phpunit/phpunit:~5.3.4" --prefer-source --no-interaction \
+    && ln -s /home/node/vendor/bin/phpunit /usr/local/bin/phpunit \
     && rm -rf /var/cache/* /tmp/*
