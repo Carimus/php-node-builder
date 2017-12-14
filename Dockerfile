@@ -58,6 +58,4 @@ RUN apk add -U \
     optipng \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION} \
     && composer selfupdate \
-    && composer require "phpunit/phpunit:~5.3.4" --prefer-source --no-interaction \
-    && ln -s /home/node/vendor/bin/phpunit /usr/local/bin/phpunit \
     && rm -rf /var/cache/* /tmp/*
