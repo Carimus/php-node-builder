@@ -58,4 +58,7 @@ RUN apk add -U \
     optipng \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION} \
     && composer selfupdate \
+    && curl -LO https://deployer.org/deployer.phar \
+    && mv deployer.phar /usr/local/bin/dep \
+    && chmod +x /usr/local/bin/dep \
     && rm -rf /var/cache/* /tmp/*
