@@ -1,8 +1,8 @@
-FROM node:8-alpine
+FROM node:8.9-alpine
 
 LABEL maintainer "e.nechehin <e.nechehin@gmail.com>"
 
-ARG COMPOSER_VERSION=1.5.5
+ARG COMPOSER_VERSION=1.6.2
 
 WORKDIR /home/node
 
@@ -56,6 +56,7 @@ RUN apk add -U \
     gifsicle \
     libpng-dev \
     optipng \
+    && npm install nodemon -g \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION} \
     && composer selfupdate \
     && curl -LO https://deployer.org/deployer.phar \
