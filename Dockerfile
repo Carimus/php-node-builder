@@ -11,6 +11,8 @@ RUN apk add -U \
     php5-json \
     php5-phar \
     php5-openssl \
+    php5-dom \
+    php5-xml \
     bash \
     curl \
     wget \
