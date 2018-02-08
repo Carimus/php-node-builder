@@ -16,6 +16,7 @@ RUN apk add -U \
     bash \
     curl \
     wget \
+    make \
     && ln `which php5` /usr/bin/php \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION} \
     && rm -rf /var/cache/* /tmp/* \
