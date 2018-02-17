@@ -7,14 +7,6 @@ ARG COMPOSER_VERSION=1.6.2
 WORKDIR /home/node
 
 RUN apk add -U \
-    php7 \
-    php7-json \
-    php7-phar \
-    php7-openssl \
-    php7-dom \
-    php7-xml \
-    php7-iconv \
-    php7-mbstring \
     bash \
     curl \
     wget \
@@ -26,6 +18,22 @@ RUN apk add -U \
     python \
     py-pip \
     zip
+
+RUN apk add -U \
+    php7 \
+    php7-json \
+    php7-phar \
+    php7-openssl \
+    php7-dom \
+    php7-xml \
+    php7-iconv \
+    php7-mbstring \
+    php7-simplexml \
+    php7-pdo \
+    php7-fileinfo \
+    php7-tokenizer \
+    php7-xmlwriter \
+    php7-zlib
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION}
 
