@@ -17,7 +17,14 @@ RUN apk add -U \
     less \
     python \
     py-pip \
-    zip
+    zip \
+    zlib-dev \
+    libpng-dev \
+    libtool \
+    autoconf \
+    automake \
+    nasm \
+    file
 
 RUN apk add -U \
     php7 \
@@ -33,7 +40,8 @@ RUN apk add -U \
     php7-fileinfo \
     php7-tokenizer \
     php7-xmlwriter \
-    php7-zlib
+    php7-zlib \
+    php7-session
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION}
 
