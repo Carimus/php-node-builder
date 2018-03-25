@@ -41,7 +41,8 @@ RUN apk add -U \
     php7-tokenizer \
     php7-xmlwriter \
     php7-zlib \
-    php7-session
+    php7-session \
+    php7-ctype
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION}
 
