@@ -24,7 +24,8 @@ RUN apk add -U \
     autoconf \
     automake \
     nasm \
-    file
+    file \
+    git
 
 RUN apk add -U \
     php7 \
