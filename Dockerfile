@@ -1,6 +1,6 @@
 FROM node:8.9-alpine
 
-LABEL maintainer "e.nechehin <e.nechehin@gmail.com>"
+LABEL maintainer "Carimus <connect@carimus.com>"
 
 ARG COMPOSER_VERSION=1.6.2
 
