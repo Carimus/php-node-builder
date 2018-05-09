@@ -1,6 +1,6 @@
 FROM node:8.9-alpine
 
-LABEL maintainer "e.nechehin <e.nechehin@gmail.com>"
+LABEL maintainer "Carimus <connect@carimus.com>"
 
 ARG COMPOSER_VERSION=1.6.2
 
@@ -46,4 +46,13 @@ RUN apk add -U \
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION}
 
+# Set base cache locations
+ADD pip.conf /root/.pip/pip.conf
+RUN npm config set cache ~/.npm --global && \
+    yarn config set cache-folder ~/.cache/yarn
+
+# Install awscli
+RUN pip install awscli boto3
+
+# Cleanup
 RUN rm -rf /var/cache/* /tmp/* && mkdir /var/cache/apk
