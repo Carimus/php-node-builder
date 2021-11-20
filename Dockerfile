@@ -1,4 +1,4 @@
-FROM node:8.16-alpine
+FROM node:10.24.1-alpine
 
 LABEL maintainer "Carimus <connect@carimus.com>"
 
